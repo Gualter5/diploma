@@ -2,14 +2,16 @@
     --text-color: white;
     --surface-color: rgba(255, 255, 255, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
-    --image-button: url(./assets/lua.svg)
+    --image-button: url(./assets/lua.svg);
+    --highlight-color: rgba(255, 255, 255, 0.2);
 }
 
 .light{
     --text-color: black;
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
-    --image-button: url(./assets/sol.svg)
+    --image-button: url(./assets/sol.svg);
+    --highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 *{
@@ -63,6 +65,25 @@ body{
     border-radius: 50%;
     background: white var(--image-button);
 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
 }
 
 ul{
@@ -82,9 +103,12 @@ ul li a{
 
     background: var(--surface-color);
     border-radius: 8px;
+
     text-decoration: none;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+
+    
 }
 
 ul li a:hover{
