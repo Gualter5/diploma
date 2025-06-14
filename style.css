@@ -1,3 +1,67 @@
+:root{
+    --text-color: white;
+}
+
+.light{
+    --text-color: black;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body{
     background: url(./assets/background-dark.jpg) no-repeat top center/cover;
+}
+
+*{
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+#everything{
+    width: 100%;
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{
+    height: 112px;
+    width: 112px;
+    border-radius: 50%;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+
+    margin: 4px auto;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+ul li a{
+    border: solid red 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    padding: 16px 24px;
+
+
 }
